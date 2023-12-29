@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import logofullbig from "../assets/logo-full-big.png";
 import logomb from "../assets/monday_logo_full.png";
 import arrowRight from "../assets/arrow-right.png";
+import { Link } from "react-router-dom";
 const user = {
   fullName: '',
   password: '',
@@ -148,9 +149,9 @@ const Invitation = () => {
                         Name your account
                       </div>
                   </div>
-                  <button type="submit" className="btn btn-primary btn-sign-up-form">
+                  <Link  to={'../invitation1'} type="submit" className="btn btn-primary btn-sign-up-form">
                     Continute<img className="submit-icon" src={arrowRight} alt="" />
-                  </button>
+                  </Link>
                 </form>
               </div>
             </div>
@@ -205,9 +206,9 @@ const Invitation = () => {
                         {validateMess}
                       </div>
                   </div>
-                  <button type="submit" id="btn-mobile" className="btn btn-primary btn-sign-up-form disabled">
+                  <Link to={'../invitation1'} type="submit" id="btn-mobile" className="btn btn-primary btn-sign-up-form disabled">
                     Continute
-                  </button>
+                  </Link>
                 </form>
               </div>
               <div className="container-logo">

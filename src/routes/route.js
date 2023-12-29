@@ -3,6 +3,7 @@ import Home from "../pages/Home"
 import NotFound from "../pages/NotFound"
 import SignUpNew from "../pages/SignUpNew"
 import Invitation from "../pages/Invitation"
+import Invitation1 from "../pages/Invitation1"
 const router = createBrowserRouter([
     {
         path: '/',
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
                 path: 'invitation',
                 element: <Invitation />
             },
+            {
+                path: 'invitation1',
+                element: <Invitation1 />
+            }
         ]
     },
     {
