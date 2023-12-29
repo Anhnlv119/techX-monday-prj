@@ -2,6 +2,7 @@ import { createBrowserRouter, redirect } from "react-router-dom"
 import Home from "../pages/Home"
 import NotFound from "../pages/NotFound"
 import SignUpNew from "../pages/SignUpNew"
+import Invitation from "../pages/Invitation"
 const router = createBrowserRouter([
     {
         path: '/',
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
             {
                 path: 'sign_up_new',
                 element: <SignUpNew />
+            },
+            {
+                path: 'invitation',
+                element: <Invitation />
             },
         ]
     },

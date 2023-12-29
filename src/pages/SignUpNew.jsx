@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 
 const SignUpNew = () => {
   return (
@@ -27,7 +27,7 @@ const SignUpNew = () => {
                     <input type="text" placeholder='name@compant.com'/>
                   </div>
                   <div className="button-continue">
-                    <button className='input-mail-button'>Continue</button>
+                    <Link to={'../invitation'} className='input-mail-button'>Continue</Link>
                   </div>
                 </div>
                 <div className="term-container">

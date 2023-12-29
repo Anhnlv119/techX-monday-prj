@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+// --------------SignUpNew-------------
 .SignUpNew {
   color: black;
   margin: 0 !important;
@@ -10,7 +14,7 @@
   width: 100vw;
   .SignUpNew-left {
     .row-sign-up {
-        flex: 1;
+      flex: 1;
       .welcome-text {
         .welcome-h1 {
           color: #323338;
@@ -30,7 +34,7 @@
       .sign-up-content {
         width: 400px;
         @media only screen and (max-width: 768px) {
-            width: 375px;
+          width: 375px;
         }
         .sign-up-with-google {
           .sign-up-with-google-button {
@@ -43,82 +47,233 @@
             align-items: center;
             justify-content: center;
             border-radius: 5px;
+            &:hover {
+              background-color: #dcdfec;
+            }
             .google-icon {
-                margin-right: 10px;
+              margin-right: 10px;
             }
           }
         }
-        .line-center{
-            margin: 16px 0;
-            display: grid;
-            gap: 8px;
-            grid-template-columns: 1fr auto 1fr;
-            .line-text{
-                margin: 0;
-            }
-            .line{
-                align-self: flex-end;
-                border-top: 1px solid #d0d4e4;
-                height: 50%;
-            }
+        .line-center {
+          margin: 16px 0;
+          display: grid;
+          gap: 8px;
+          grid-template-columns: 1fr auto 1fr;
+          .line-text {
+            margin: 0;
+          }
+          .line {
+            align-self: flex-end;
+            border-top: 1px solid #d0d4e4;
+            height: 50%;
+          }
         }
-        .sign-up-with-mail{
-            .input-mail{
-                input{
-                    border: 1px solid #323338;
-                    padding: 8px 16px;
-                    width: 100%;
-                    margin-bottom: 16px;
-                    border-radius: 5px;
-                }
+        .sign-up-with-mail {
+          .input-mail {
+            input {
+              border: 1px solid #323338;
+              padding: 8px 16px;
+              width: 100%;
+              margin-bottom: 16px;
+              border-radius: 5px;
             }
-            .button-continue{
-                .input-mail-button{
-                    background-color: #0073ea;
-                    color: white;
-                    width: 100%;
-                    height: 40px;
-                    padding: 8px 16px;
-                    border-radius: 5px;
-                }
+          }
+          .button-continue {
+            .input-mail-button {
+              display: inline-block;
+              background-color: #0073ea;
+              color: white;
+              width: 100%;
+              height: 40px;
+              padding: 8px 16px;
+              border-radius: 5px;
+              text-decoration: none;
+              &:hover {
+                background-color: #0060b9;
+              }
             }
+          }
         }
-        .term-container{
-            margin-top: 16px;
-            .term-text{
-                padding: 0 4px;
+        .term-container {
+          margin-top: 16px;
+          .term-text {
+            padding: 0 4px;
+          }
+          .term-link {
+            a {
+              color: #1f76c2;
+              text-decoration: none;
+              &:hover {
+                text-decoration: underline;
+              }
             }
-            .term-link{
-                a{
-                    color: #1f76c2;
-                    text-decoration: none;
-                    &:hover{
-                        text-decoration: underline;
-                    }
-                }
-
-            }
+          }
         }
       }
     }
-    .login-allready{
-        margin-bottom: 64px;
-        .login-allready-h3{
-            font-size: 16px;
-            a{
-                color: #1f76c2;
-                text-decoration: none;
-                &:hover{
-                    text-decoration: underline;
-                }
-            }
+    .login-allready {
+      margin-bottom: 64px;
+      .login-allready-h3 {
+        font-size: 16px;
+        a {
+          color: #1f76c2;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
         }
+      }
     }
   }
   .SignUpNew-right {
     margin: 0;
     padding: 0;
     background-image: url("https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/signup-right-side-assets-new-flow/welcome-to-monday.png");
+    background-size: auto;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+}
+
+
+// --------------Invitation-------------
+.Invitation {
+  color: black;
+  margin: 0 !important;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  .invitation-left {
+    padding: 64px 128px;
+    .row-invitation {
+      flex: 1;
+      position: relative;
+      .container-logo {
+        margin-bottom: 64px;
+        .monday-logo {
+          width: 134px;
+          height: 24px;
+        }
+      }
+      .sign-up-container {
+        .form-title {
+          margin-bottom: 24px;
+          .form-title-h1 {
+            font-weight: 500;
+            color: #323338;
+            font-size: 24px;
+          }
+        }
+        .sign-up-form {
+          .sign-up-item {
+            margin-bottom: 0;
+            width: 75%;
+            min-height: 104px;
+            min-width: 400px;
+            .sign-up-label {
+              color: #323338;
+              font-size: 14px;
+            }
+            .sign-up-input {
+              width: 100%;
+              height: 48px;
+              outline: 0;
+              border: 1px solid #c3c6d4;
+              padding: 8px 16px;
+              box-shadow: none;
+              &:active {
+                border-color: #0073ea;
+              }
+              &:hover {
+                border-color: #323338;
+              }
+            }
+            .sign-up-validate {
+              border-color: #d83a52;
+            }
+            .sign-up-danger {
+              display: none;
+              color: #d83a52;
+            }
+          }
+          .btn-sign-up-form {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: fit-content;
+            padding: 8px 16px;
+            border-radius: 2px;
+            .submit-icon {
+              width: 20px;
+              height: 20px;
+              display: inline-block;
+              margin-left: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .invitation-left-mb {
+    .sign-up-container {
+      position: relative;
+      flex-grow: 1;
+      min-height: 0;
+      height: 90%;
+      padding: 0px 12px;
+      margin-top: 32px;
+      .form-title {
+        margin-bottom: 16px;
+        .form-title-h1 {
+          font-size: 24px;
+        }
+      }
+      .sign-up-form {
+        position: relative;
+        margin-top: 24px;
+        .sign-up-item {
+          margin-bottom: 32px;
+          .sign-up-label {
+            font-size: 14px;
+          }
+          .sign-up-input {
+            padding: 8px 16px;
+          }
+          .sign-up-danger {
+            display: none;
+            color: #d83a52;
+          }
+        }
+        .btn-sign-up-form {
+          margin-top: 48px;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          
+          padding: 12px 24px;
+        }
+        .disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+          background-color: #ecedf5;
+          color: rgba(50, 51, 56, 0.38);
+          border-color: #ecedf5;
+        }
+      }
+      .container-logo {
+        .monday-logo {
+          padding: 8px 0;
+          position: fixed;
+          bottom: 0;
+        }
+      }
+    }
+  }
+  .invitation-right {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/signup-right-side-assets-new-flow/set-up-your-account.png");
     background-size: auto;
     background-size: 100% 100%;
     background-position: center;
