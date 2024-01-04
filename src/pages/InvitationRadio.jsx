@@ -1,21 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logofullbig from "../assets/logo-full-big.png";
-import logomb from "../assets/monday_logo_full.png";
+import layout from "../components/layout";
+import dsLogo from"../components/logo/dsLogo"
+import mbLogo from '../components/logo/mbLogo';
 import arrowRight from "../assets/arrow-right.png";
 const Invitation1 = () => {
   return (
-    <>
-      <div className="Invitation1 row">
-        <div className="invitation1-left col-12 col-md-7 container d-none d-md-flex flex-column">
+      layout(
+      <div className="Invitation1">
+        <div className="invitation1-left container d-none d-md-flex flex-column">
           <div className="row-invitation1 justify-space-between">
-            <div className="container-logo">
-              <img
-                className="monday-logo"
-                src={logofullbig}
-                alt="logofullbig"
-              />
-            </div>
+            {dsLogo()}
             <div className="sign-up-container">
               <div className="form-title">
                 <h1 className="form-title-h1">
@@ -190,7 +185,7 @@ const Invitation1 = () => {
                 </div>
               </div>
             </div>
-            <Link  to={'../invitation1'} type="submit" className="btn btn-primary btn-sign-up-form">
+            <Link  to={'../invitationCheckBox'} type="submit" className="btn btn-primary btn-sign-up-form">
                     Continute<img className="submit-icon" src={arrowRight} alt="" />
             </Link>
           </div>
@@ -205,14 +200,12 @@ const Invitation1 = () => {
             <div className="sign-up-form">
                 
             </div>
-            <div className="container-logo">
-              <img className="monday-logo" src={logomb} alt="logofullbig" />
-            </div>
+            {mbLogo()}
           </div>
         </div>
-        <div className="invitation1-right d-none d-md-block col-md-5"></div>
       </div>
-    </>
+      )
+
   );
 };
 
