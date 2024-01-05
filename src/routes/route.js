@@ -5,6 +5,7 @@ import SignUpNew from "../pages/SignUpNew"
 import Invitation from "../pages/Invitation"
 import InvitationRadio from "../pages/InvitationRadio"
 import InvitationCheckBox from "../pages/InvitationCheckBox"
+import InviteMember from "../pages/InviteMember"
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path: 'invitationCheckBox',
                 element: <InvitationCheckBox />
+            },
+            {
+                path: 'invite',
+                element: <InviteMember />
             }
         ]
     },

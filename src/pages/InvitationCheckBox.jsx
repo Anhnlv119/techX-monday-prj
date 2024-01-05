@@ -174,7 +174,7 @@ const InvitationCheckBox = () => {
             Back
           </Link>
           <Link
-            to={"../invitation-cbox"}
+            to={"../invite"}
             type="submit"
             className="btn btn-primary btn-sign-up-form"
           >

@@ -490,9 +490,144 @@
         margin-bottom: 3px;
         margin-right: 10px;
       }
+      &:hover{
+        background-color: #dcdfec;
+        border-color: #dcdfec;
+      }
     }
   }
   .invitation-cbox-left-mb {
+    .sign-up-container {
+      position: relative;
+      flex-grow: 1;
+      min-height: 0;
+      height: 90%;
+      padding: 0px 12px;
+      margin-top: 32px;
+      .form-title {
+        margin-bottom: 16px;
+        .form-title-h1 {
+          font-size: 24px;
+        }
+      }
+      .sign-up-form {
+        position: relative;
+        margin-top: 24px;
+        .btn-sign-up-form {
+          margin-top: 48px;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+
+          padding: 12px 24px;
+        }
+        .disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+          background-color: #ecedf5;
+          color: rgba(50, 51, 56, 0.38);
+          border-color: #ecedf5;
+        }
+      }
+    }
+  }
+}
+
+// --------------InviteMember-------------
+.inviteMember {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  .invite-member-left {
+    height: 100%;
+    width: 100%;
+    padding: 64px 96px;
+    .row-invite-member {
+      flex: 1;
+      position: relative;
+      .sign-up-container {
+        .form-title {
+          margin-bottom: 8px;
+          .form-title-h2 {
+            font-weight: 500;
+            color: #323338;
+            font-size: 24px;
+          }
+          .form-title-p{
+            font-size: 18px;
+          }
+        }
+        .sign-up-form {
+          height: 100%;
+          width: 75%;
+          .list-input {
+            .input-container {
+              .input-group{
+                .input-data{
+                  box-shadow: none;
+                }
+                .btn-dropdown{
+                  box-shadow: none;
+                }
+                .dropdown-item{
+                  .dropdown-h5{
+                    font-size: 16px;
+                  }
+                  .dropdown-p{
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+          .add-btn{
+            padding: 8px 16px;
+            border-radius: 5px;
+            &:hover{
+              background-color: #dcdfec;
+            }
+          }        
+        }
+      }
+      .sign-up-container-2 {
+        margin-top: 64px;
+      }
+    }
+    .btn-sign-up-form {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: fit-content;
+      padding: 8px 16px;
+      border-radius: 5px;
+      .submit-icon {
+        height: 13px;
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
+    .btn-back{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: fit-content;
+      padding: 8px 16px;
+      border-radius: 2px;
+      border: 1px solid white;
+      border-radius: 5px;
+      .back-icon{
+        display: inline-block;
+        height: 13px;
+        margin-bottom: 3px;
+        margin-right: 10px;
+      }
+      &:hover{
+        background-color: #dcdfec;
+        border-color: #dcdfec;
+      }
+    }
+  }
+  .invite-member-left-mb {
     .sign-up-container {
       position: relative;
       flex-grow: 1;

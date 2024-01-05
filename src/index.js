@@ -4,6 +4,7 @@ import { RouterProvider } from "react-router-dom";
 import router from "./routes/route";
 import './index.scss';
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import App from './App';
 
 // // redux store
