@@ -3,12 +3,14 @@ import Home from "../pages/Home"
 import NotFound from "../pages/NotFound"
 import SignUpNew from "../pages/SignUpNew"
 import Invitation from "../pages/Invitation"
-import Invitation1 from "../pages/Invitation1"
+import InvitationRadio from "../pages/InvitationRadio"
+import InvitationCheckBox from "../pages/InvitationCheckBox"
+import InvitationTest from "../pages/InvitationTest"
 const router = createBrowserRouter([
     {
         path: '/',
         loader: () => {
-            return redirect('/home')
+            return redirect('/users/sign_up_new')
         }
     },
     {
@@ -28,7 +30,11 @@ const router = createBrowserRouter([
             },
             {
                 path: 'invitation1',
-                element: <Invitation1 />
+                element: <InvitationRadio />
+            },
+            {
+                path: 'invitationCheckBox',
+                element: <InvitationCheckBox />
             }
         ]
     },

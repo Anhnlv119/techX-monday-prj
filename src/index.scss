@@ -1,9 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+//---------------Global----------------
 * {
   box-sizing: border-box;
+}
+
+.layout {
+  color: black;
+  margin: 0 !important;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  .layout-right {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-size: auto;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+}
+
+.container-logo {
+  margin-bottom: 64px;
+  .monday-logo {
+    width: 134px;
+    height: 24px;
+  }
+}
+
+.container-logo-mb {
+  .monday-logo {
+    padding: 8px 0;
+    position: fixed;
+    bottom: 0;
+  }
 }
 // --------------SignUpNew-------------
 .SignUpNew {
@@ -138,23 +170,16 @@
 
 // --------------Invitation-------------
 .Invitation {
-  color: black;
-  margin: 0 !important;
   padding: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   .invitation-left {
+    height: 100%;
+    width: 100%;
     padding: 64px 128px;
     .row-invitation {
       flex: 1;
       position: relative;
-      .container-logo {
-        margin-bottom: 64px;
-        .monday-logo {
-          width: 134px;
-          height: 24px;
-        }
-      }
       .sign-up-container {
         .form-title {
           margin-bottom: 24px;
@@ -169,7 +194,7 @@
             margin-bottom: 0;
             width: 75%;
             min-height: 104px;
-            min-width: 400px;
+            min-width: 37vw;
             .sign-up-label {
               color: #323338;
               font-size: 14px;
@@ -260,44 +285,22 @@
           border-color: #ecedf5;
         }
       }
-      .container-logo {
-        .monday-logo {
-          padding: 8px 0;
-          position: fixed;
-          bottom: 0;
-        }
-      }
     }
-  }
-  .invitation-right {
-    margin: 0;
-    padding: 0;
-    background-image: url("https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/signup-right-side-assets-new-flow/set-up-your-account.png");
-    background-size: auto;
-    background-size: 100% 100%;
-    background-position: center;
   }
 }
 
 // --------------Invitation1-------------
 .Invitation1 {
-  color: black;
-  margin: 0 !important;
   padding: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   .invitation1-left {
+    height: 100%;
+    width: 100%;
     padding: 64px 128px;
     .row-invitation1 {
       flex: 1;
       position: relative;
-      .container-logo {
-        margin-bottom: 64px;
-        .monday-logo {
-          width: 134px;
-          height: 24px;
-        }
-      }
       .sign-up-container {
         .form-title {
           margin-bottom: 8px;
@@ -312,7 +315,7 @@
             display: flex;
             flex-wrap: wrap;
             margin-left: -8px;
-            .radio-container{
+            .radio-container {
               margin-left: 8px;
               margin-top: 16px;
               padding: 4px 12px;
@@ -323,10 +326,10 @@
               border-radius: 32px;
               height: fit-content;
               .sign-up-radio-item {
-                .form-check-input{
+                .form-check-input {
                   box-shadow: none;
                 }
-                .form-check-label{
+                .form-check-label {
                   font-size: 14px;
                 }
               }
@@ -348,11 +351,11 @@
           }
         }
       }
-      .sign-up-container-2{
+      .sign-up-container-2 {
         margin-top: 64px;
       }
     }
-    .btn-sign-up-form{
+    .btn-sign-up-form {
       position: absolute;
       bottom: 0;
       right: 0;
@@ -400,21 +403,128 @@
           border-color: #ecedf5;
         }
       }
-      .container-logo {
-        .monday-logo {
-          padding: 8px 0;
-          position: fixed;
-          bottom: 0;
+    }
+  }
+}
+
+// --------------InvitationCheckBox-------------
+.invitationCbox {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  .invitation-cbox-left {
+    height: 100%;
+    width: 100%;
+    padding: 64px 128px;
+    .row-invitation-cbox {
+      flex: 1;
+      position: relative;
+      .sign-up-container {
+        .form-title {
+          margin-bottom: 8px;
+          .form-title-h2 {
+            font-weight: 500;
+            color: #323338;
+            font-size: 24px;
+          }
         }
+        .sign-up-form {
+          .list-check {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -8px;
+            .box-container {
+              margin-left: 8px;
+              margin-top: 16px;
+              padding: 6px 16px;
+              font-size: 16px;
+              font-weight: 300;
+              color: #676879;
+              border: 1px solid #c3c6d4;
+              border-radius: 32px;
+              height: -moz-fit-content;
+              height: fit-content;
+              .form-check {
+                .form-check-input {
+                  box-shadow: none;
+                  margin-right: 14px;
+                }
+                .form-check-label {
+                  font-size: 16px;
+                  font-weight: 300;
+                }
+              }
+            }
+          }        
+        }
+      }
+      .sign-up-container-2 {
+        margin-top: 64px;
+      }
+    }
+    .btn-sign-up-form {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: fit-content;
+      padding: 8px 16px;
+      border-radius: 5px;
+      .submit-icon {
+        height: 13px;
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
+    .btn-back{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: fit-content;
+      padding: 8px 16px;
+      border-radius: 2px;
+      border: 1px solid #c3c6d4;
+      border-radius: 5px;
+      .back-icon{
+        display: inline-block;
+        height: 13px;
+        margin-bottom: 3px;
+        margin-right: 10px;
       }
     }
   }
-  .invitation1-right {
-    margin: 0;
-    padding: 0;
-    background-image: url("https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/signup-right-side-assets-new-flow/what-brings-you-here-today.png");
-    background-size: auto;
-    background-size: 100% 100%;
-    background-position: center;
+  .invitation-cbox-left-mb {
+    .sign-up-container {
+      position: relative;
+      flex-grow: 1;
+      min-height: 0;
+      height: 90%;
+      padding: 0px 12px;
+      margin-top: 32px;
+      .form-title {
+        margin-bottom: 16px;
+        .form-title-h1 {
+          font-size: 24px;
+        }
+      }
+      .sign-up-form {
+        position: relative;
+        margin-top: 24px;
+        .btn-sign-up-form {
+          margin-top: 48px;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+
+          padding: 12px 24px;
+        }
+        .disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+          background-color: #ecedf5;
+          color: rgba(50, 51, 56, 0.38);
+          border-color: #ecedf5;
+        }
+      }
+    }
   }
 }

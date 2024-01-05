@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from "react";
-import logofullbig from "../assets/logo-full-big.png";
-import logomb from "../assets/monday_logo_full.png";
 import arrowRight from "../assets/arrow-right.png";
 import { Link } from "react-router-dom";
+import dsLogo from"../components/logo/dsLogo"
+import mbLogo from '../components/logo/mbLogo';
+import layout from "../components/layout";
 const user = {
   fullName: '',
   password: '',
@@ -68,17 +69,11 @@ const Invitation = () => {
     activeButon()
    }, [userData])
   return (
-    <>
-      <div className="Invitation row">
-        <div className="invitation-left col-12 col-md-7 container d-none d-md-flex flex-column">
+      layout(
+      <div className="Invitation">
+        <div className="invitation-left container d-none d-md-flex flex-column">
           <div className="row-invitation justify-space-between">
-            <div className="container-logo">
-              <img
-                className="monday-logo"
-                src={logofullbig}
-                alt="logofullbig"
-              />
-            </div>
+            {dsLogo}
             <div className="sign-up-container">
               <div className="form-title">
                 <h1 className="form-title-h1">Create your account</h1>
@@ -211,18 +206,12 @@ const Invitation = () => {
                   </Link>
                 </form>
               </div>
-              <div className="container-logo">
-              <img
-                className="monday-logo"
-                src={logomb}
-                alt="logofullbig"
-              />
-            </div>
+                {mbLogo}
             </div>
         </div>
-        <div className="invitation-right d-none d-md-block col-md-5"></div>
       </div>
-    </>
+      )
+
   );
 };
 
