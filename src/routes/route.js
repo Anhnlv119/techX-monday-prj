@@ -5,7 +5,7 @@ import SignUpNew from "../pages/SignUpNew"
 import Invitation from "../pages/Invitation"
 import InvitationRadio from "../pages/InvitationRadio"
 import InvitationCheckBox from "../pages/InvitationCheckBox"
-import InvitationTest from "../pages/InvitationTest"
+
 const router = createBrowserRouter([
     {
         path: '/',
